@@ -32,7 +32,9 @@ app.post("/checkout", async (req, res) => {
             },
             metadata: {
                 userId: "22"
-            }
+            },
+            redirect_url: `http://159.223.51.198:5000/`,
+            cancel_url: `http://159.223.51.198:5000/#/dashboard`
         })
         console.log('Payment_Url :', charge.hosted_url)
         res.status(200).json({
